@@ -1,0 +1,84 @@
+<!-- Created by TYP 🎖-->
+
+<!--created by TheYoung Programmer
+Happy Birthday Grandma-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Happy Birthday</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/><script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  </head>
+  <body>
+<section id="sec1" class="sec sec1">
+<button onclick="openpg1()">Let's play a Birthdy Game</button>
+</section>
+<section id="sec2" class="sec">
+  <h3>Find Your Gift</h3>
+    <div id="pg1" class="gfcontainer">
+      
+      </div>
+    </section>
+    <section id="sec3" class="sec sec3" >
+      <img  class="bd" src="https://th.bing.com/th/id/R59e3bb9c02416f56ae634327eaaa4e5d?rik=V0uZg3LasievzQ&riu=http%3a%2f%2fclipartsign.com%2fupload%2f2016%2f01%2f24%2fhappy-birthday-clip-art-6-1.png&ehk=8t%2fOpEiNi1wzn0IQMkf37zPNdmBVcXauq4hyKoDmOKc%3d&risl=&pid=ImgRaw">
+      <img  class="profile" src="https://api.sololearn.com/Uploads/Avatars/9832097.jpg">
+      <h2>Happy Birthday<span>  Grandma</span></h2>
+    <p>Wishing you many many Happy returns of this Birthday 🎂<br /> and wish you Longlife and Prosperity, and all your dreams come true😍😍<br>Happy Birthday, Grandma! I hope the day brings you joy and happiness, something you’ve brought to so many people.<br />When I think about all the help you’ve given to others over the years with the Food Shelf, church, the nursing home and more, <br />I know that you deserve the best day. I hope you know that I love you.<br /> Thank you for being my grandma.” You are the Best grandma and you are very kind and helpful person on my life🥰🥰💯<br />Once again HBD Grandma💏💏
+</p><br />
+<p>“Happy, happy birthday Grandma! I wish you all the very best health and happiness, not just today but always!”</p>
+
+    </section>
+    <audio src="https://mobcup.net/d/cz9nla56/mp3" loop id="audio">
+  </body>
+  <script>
+    const openpg1=()=>{
+    document.getElementById('sec2').style.display="block";
+    document.getElementById('sec1').style.display="none";
+    var pg1=document.getElementById('pg1');
+    var txt="";
+    const shuffle=(array)=> {
+      array.sort(() => Math.random() - 0.5);
+    }
+ 
+    let arr = [1,2,3,4,5,6,7,8];
+    shuffle(arr);
+
+    for(let i=0;i<8;i++){
+    txt+=`<img id="${i}" src="https://i.pinimg.com/originals/b4/ff/30/b4ff30eaa2d64022f350f6bca64ee6db.png" alt="Open Gift" onclick="openGift(${arr[i]})">`; }
+    pg1.innerHTML=txt;
+  }
+const openGift=(val)=>{
+  switch (val) {
+  case 1:
+  case 2:
+  case 3:
+  case 4:
+  case 5:
+  case 6:
+  case 7:showAlert();break;
+  case 8:openGiftpage();
+    
+}
+}
+const showAlert=()=>{
+  Swal.fire({
+  imageUrl:"https://gifimage.net/wp-content/uploads/2018/06/try-again-animated-gif-5.gif",
+  imageHeight: 200,
+  imageAlt: 'Custom image',
+  imageWidth: 200,
+})
+} 
+const openGiftpage=()=>{
+    document.getElementById('sec3').style.display="block";
+    document.getElementById('sec2').style.display="none";
+    var a=document.getElementById("audio");
+    if(a.paused){
+        a.play();
+        navigator.vibrate([10010,100,10,010,10101,1020,10100,10100,1100,101010,101001,10101010100,101001,1001,10101.100100]);
+}
+}
+  
+  </script>
+</html>
+      
